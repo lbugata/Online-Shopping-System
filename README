@@ -1,5 +1,4 @@
-Laxmi Lahari Naidu Bugata & lbugata@binghamton.edu
-Vankayal Megha Shree & mvankayal@binghamton.edu
+
 
 Python3
 
@@ -26,9 +25,9 @@ def create_hash(data):
 Yes, the code was tested in remote.cs.binghamton.edu and it worked as expected.
 
 Execution Steps:
-1. Run the bank.py file - python3 bank.py remote.cs.binghamton.edu 1234
-2. Run the server.py file - python3 server.py remote.cs.binghamton.edu 1234 3456
-3. Run the client.py file - python3 client.py remote.cs.binghamton.edu 3456
+1. Run the bank.py file - python3 bank.py localhost 1234
+2. Run the server.py file - python3 server.py localhost 1234 3456
+3. Run the client.py file - python3 client.py localhost 3456
 
 Dear TA/grader should take note of the following:
 1. Run the files in the above mentioned order.
