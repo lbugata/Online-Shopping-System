@@ -1,0 +1,72 @@
+Laxmi Lahari Naidu Bugata & lbugata@binghamton.edu
+Vankayal Megha Shree & mvankayal@binghamton.edu
+
+Python3
+
+Encryption:
+
+def rsa_encrypt(message, pubkey):
+    """Encrypt a message using the provided public key."""
+    return pubkey.encrypt(message.encode(), padding.PKCS1v15())
+
+Decryption:
+
+def rsa_decrypt(cipher_text, privkey):
+    """Decrypt a cipher text using the provided private key."""
+    return privkey.decrypt(cipher_text, padding.PKCS1v15())
+
+Hashing:
+
+def create_hash(data):
+    """Create a SHA-512 hash of the data."""
+    hash_object = hashlib.sha512(data.encode())
+    return f"H({hash_object.hexdigest()})"
+
+
+Yes, the code was tested in remote.cs.binghamton.edu and it worked as expected.
+
+Execution Steps:
+1. Run the bank.py file - python3 bank.py remote.cs.binghamton.edu 1234
+2. Run the server.py file - python3 server.py remote.cs.binghamton.edu 1234 3456
+3. Run the client.py file - python3 client.py remote.cs.binghamton.edu 3456
+
+Dear TA/grader should take note of the following:
+1. Run the files in the above mentioned order.
+2. After running the client.py file, the user will be prompted to enter the item details.
+3. The user can enter the item details.
+4. The user can enter the card details and the payment will be processed.
+
+Example:
+
+Connected to server at remote.cs.binghamton.edu:6000
+Start Shopping
+Debug: Received data from server:
+10000 table 100
+10001 tv 2000
+10002 lego 40
+10003 lamp 20
+Successfully retrieved items list from the server.
+Enter item ID: 100000000
+Invalid input, please try again.
+Enter item ID: 10000
+Add more items to cart? (y/n): y
+Enter item ID: 10001
+Add more items to cart? (y/n): y
+Enter item ID: 10002
+Add more items to cart? (y/n): n
+1 x table @ $100 each
+1 x tv @ $2000 each
+1 x lego @ $40 each
+Total to pay: $2140
+Proceed to checkout? (y/n): n
+Transaction aborted by user.
+
+
+Sample Credit Cards Details used for testing:
+name = alice
+card number = 2216285755786555
+hash code = H(159d8c2d1b7dd92ba6dff1f74cfba14a0b5df69121a08e3de0fbeca003a23b845a4b428172dd1431fbd05066ed2604b807c36b4b3fd7123dc4f66c980404c958)
+
+name = bob
+card number = 9130120057782262
+hash code = H(4a7894de8cc99dfe98c88841ca20ecc63bda1cfef3756dde1c1544373037a58511968677d48d60589e63a116656ffcf84c7d207c6f94b898f9ca13abd9317102)
