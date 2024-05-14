@@ -113,7 +113,7 @@ def run_server(host, port_number):
                 connection, address = sock.accept()
                 handle_client_connection(connection, account_info)
         except KeyboardInterrupt:
-            print("Server shutdon initiated by user")
+            print("Server shutdown initiated by user")
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
